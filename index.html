@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional | Fathir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #010a13; 
+            color: #e2e8f0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Shadow Atmosfer */
+        .left-light {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at 0% 50%, rgba(0, 139, 139, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .right-glow {
+            position: fixed;
+            bottom: -10%;
+            right: -5%;
+            width: 40%;
+            height: 60%;
+            background: radial-gradient(circle at 100% 100%, rgba(251, 191, 36, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Utilities */
+        .text-aqua-deep { color: #008b8b; }
+        .text-yellow-gold { color: #fbbf24; }
+        
+        .card-bg {
+            background: rgba(2, 20, 26, 0.7);
+            border: 1px solid rgba(0, 139, 139, 0.15);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+
+        /* Global Button Style */
+        .btn-modern {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #008b8b;
+            color: white;
+        }
+
+        .btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #008b8b 0%, #fbbf24 100%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s ease;
+        }
+        
+        .btn-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 139, 139, 0.3);
+            border-color: rgba(251, 191, 36, 0.5);
+            color: #010a13 !important; 
+        }
+
+        .btn-modern:hover::before {
+            opacity: 1;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #008b8b, #fbbf24);
+            border-radius: 2px;
+        }
+
+        .glass-text {
+            background: linear-gradient(to bottom right, #fff 40%, rgba(0, 139, 139, 0.6));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <div class="left-light"></div>
+    <div class="right-glow"></div>
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-50 bg-[#010a13]/80 backdrop-blur-xl border-b border-white/5">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">
+                <span class="text-white">Fathir</span><span class="text-yellow-gold">.</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="#about" class="btn-modern px-5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-slate-300">Profil</a>
+                <a href="#skills" class="btn-modern px-5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-slate-300">Keahlian</a>
+                <a href="#blog" class="btn-modern px-5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-slate-300">Jurnal</a>
+                <a href="#projects" class="btn-modern px-5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-slate-300">Projek</a>
+            </div>
+
+            <div class="md:hidden">
+                <button class="text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Profil -->
+    <section id="about" class="relative min-h-screen flex items-center pt-20 px-8 z-10">
+        <div class="container mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10">
+                <div class="space-y-6">
+                    <!-- <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-yellow-500/5 border border-yellow-500/20"> -->
+                        <!-- <span class="w-2 h-2 rounded-full bg-yellow-gold mr-3 animate-pulse"></span> -->
+                        <!-- <span class="text-[10px] text-yellow-gold font-bold uppercase tracking-widest">Alumni SMK Cyber Media</span> -->
+                    </div>
+                    <h1 class="text-6xl md:text-7xl font-bold leading-[1.05] glass-text">
+                        Infrastruktur <br><span class="text-aqua-deep italic">& Jaringan.</span>
+                    </h1>
+                </div>
+                <!-- <p class="text-slate-400 text-lg leading-relaxed max-w-xl font-light"> -->
+                    <!-- Membangun fondasi digital yang kokoh dengan spesialisasi <span class="text-yellow-gold font-medium">Enterprise Networking</span>. Berfokus pada keamanan, skalabilitas, dan efisiensi sistem. -->
+                </p>
+                <div class="flex items-center">
+                    <a href="#projects" class="px-10 py-5 btn-modern btn-primary rounded-xl font-bold text-xs uppercase tracking-widest text-center">
+                        Eksplorasi Projek
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-aqua-deep to-yellow-gold rounded-3xl blur-2xl opacity-10 group-hover:opacity-20 transition-all"></div>
+                    <div class="relative w-64 h-80 md:w-84 md:h-[500px] bg-slate-900/40 rounded-3xl border border-white/10 backdrop-blur-md flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aqua-deep/5 to-transparent"></div>
+                        <span class="text-8xl md:text-9xl filter drop-shadow-[0_0_30px_rgba(0,139,139,0.3)]">🖥️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Keahlian -->
+    <section id="skills" class="py-32 relative z-10">
+        <div class="container mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-6">
+                <h2 class="text-4xl font-bold section-title text-white uppercase tracking-tighter">Kompetensi Inti</h2>
+                <p class="text-slate-500 text-sm max-w-xs font-light">Implementasi teknologi standar industri untuk solusi bisnis global.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-10 card-bg rounded-2xl group cursor-default">
+                    <div class="w-12 h-12 bg-aqua-deep/10 flex items-center justify-center rounded-xl mb-8 group-hover:bg-yellow-gold transition-all duration-500">
+                        <svg class="w-6 h-6 text-aqua-deep group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">CISCO Networking</h4>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed">Konfigurasi Switch & Router pada arsitektur jaringan kompleks.</p>
+                </div>
+                <div class="p-10 card-bg rounded-2xl group cursor-default">
+                    <div class="w-12 h-12 bg-aqua-deep/10 flex items-center justify-center rounded-xl mb-8 group-hover:bg-yellow-gold transition-all duration-500">
+                        <svg class="w-6 h-6 text-aqua-deep group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">MikroTik OS</h4>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed">Manajemen trafik, firewalling, dan optimasi bandwidth QoS.</p>
+                </div>
+                <div class="p-10 card-bg rounded-2xl group cursor-default">
+                    <div class="w-12 h-12 bg-aqua-deep/10 flex items-center justify-center rounded-xl mb-8 group-hover:bg-yellow-gold transition-all duration-500">
+                        <svg class="w-6 h-6 text-aqua-deep group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Debian Server</h4>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed">Administrasi Linux Server, Web Services, dan Keamanan Sistem.</p>
+                </div>
+                <div class="p-10 card-bg rounded-2xl group cursor-default">
+                    <div class="w-12 h-12 bg-aqua-deep/10 flex items-center justify-center rounded-xl mb-8 group-hover:bg-yellow-gold transition-all duration-500">
+                        <svg class="w-6 h-6 text-aqua-deep group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Web Development</h4>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed">Pengembangan antarmuka responsif dengan standar performa tinggi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Jurnal -->
+    <section id="blog" class="py-32 px-8 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-20 section-title text-white uppercase tracking-tight text-right block w-full">Logs & Insights</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <article class="card-bg p-12 rounded-3xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-yellow-gold text-[10px] font-bold tracking-[0.3em] uppercase">Networking</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+                            <span class="text-slate-500 text-[10px] uppercase font-medium">Februari 2024</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-6 leading-tight group-hover:text-aqua-deep transition-colors">Optimasi Performa Jaringan Berbasis MikroTik</h3>
+                        <p class="text-slate-400 mb-10 leading-relaxed font-light">Studi kasus mendalam mengenai manajemen bandwidth pada lingkungan trafik tinggi.</p>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-[10px] font-bold text-white tracking-widest uppercase group/link transition-all hover:text-yellow-gold">
+                        Baca Selengkapnya 
+                        <span class="ml-4 w-8 h-[1px] bg-yellow-gold group-hover/link:w-12 transition-all"></span>
+                    </a>
+                </article>
+                <article class="card-bg p-12 rounded-3xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-yellow-gold text-[10px] font-bold tracking-[0.3em] uppercase">Security</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+                            <span class="text-slate-500 text-[10px] uppercase font-medium">Januari 2024</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-6 leading-tight group-hover:text-aqua-deep transition-colors">Hardening Linux Server Environment</h3>
+                        <p class="text-slate-400 mb-10 leading-relaxed font-light">Langkah preventif mengamankan Debian Server dari akses tidak sah dan serangan malware.</p>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-[10px] font-bold text-white tracking-widest uppercase group/link transition-all hover:text-yellow-gold">
+                        Baca Selengkapnya 
+                        <span class="ml-4 w-8 h-[1px] bg-yellow-gold group-hover/link:w-12 transition-all"></span>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Projek -->
+    <section id="projects" class="py-32 bg-aqua-deep/5 px-8 relative z-10 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-4xl font-bold section-title text-white uppercase tracking-tighter">Selected Projects</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group">
+                    <div class="relative aspect-video bg-slate-900/80 rounded-2xl border border-white/5 overflow-hidden mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-aqua-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-aqua-deep/20 font-black text-4xl group-hover:scale-110 transition-transform tracking-widest">POS</div>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-gold transition-colors">Web-Based Cashier System</h4>
+                    <p class="text-sm text-slate-500 font-light italic">Solusi manajemen kasir modern.</p>
+                </div>
+                <div class="group">
+                    <div class="relative aspect-video bg-slate-900/80 rounded-2xl border border-white/5 overflow-hidden mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-aqua-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-aqua-deep/20 font-black text-4xl group-hover:scale-110 transition-transform tracking-widest">CISCO</div>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-gold transition-colors">Connectivity Infra</h4>
+                    <p class="text-sm text-slate-500 font-light italic">Pemeliharaan infrastruktur jaringan Cisco.</p>
+                </div>
+                <div class="p-10 card-bg rounded-3xl border-l-4 border-yellow-gold relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-yellow-gold/5 rounded-full blur-2xl group-hover:bg-yellow-gold/10 transition-all"></div>
+                    <div class="flex items-center mb-6">
+                        <span class="text-yellow-gold font-bold text-[10px] tracking-widest uppercase">Professional Intern</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-4">IT Support Ops</h4>
+                    <p class="text-sm text-slate-400 font-light italic mb-8 leading-relaxed">6 bulan pengalaman intensif dalam troubleshooting hardware dan siklus hidup TI.</p>
+                    <div class="flex items-center space-x-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-aqua-deep"></span>
+                        <span class="text-[9px] text-aqua-deep font-bold tracking-widest uppercase">Tersertifikasi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 bg-[#010a13] relative z-10">
+        <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-xl font-bold tracking-tighter text-white">Fathir<span class="text-yellow-gold">.</span></div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="btn-modern w-10 h-10 rounded-full text-[10px] font-bold text-slate-400">LN</a>
+                <a href="#" class="btn-modern w-10 h-10 rounded-full text-[10px] font-bold text-slate-400">GH</a>
+                <a href="#" class="btn-modern w-10 h-10 rounded-full text-[10px] font-bold text-slate-400">EM</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
